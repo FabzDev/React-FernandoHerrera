@@ -8,6 +8,6 @@ import './styles.css';
 ReactDOM.createRoot( document.getElementById("root"))
 .render(
     <React.StrictMode>
-        <FirstApp nombre = "Fazdev" title="El Jaken 2"/>
+        <FirstApp nombre="Inuyasha!" title="Seshomaru ataca de nuevo..."/>
     </React.StrictMode>    
 )
