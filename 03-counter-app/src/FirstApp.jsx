@@ -10,8 +10,8 @@
 //   );
 // };
 
-
 const getNombre = (nombre) => nombre
+
 
 // export const FirstApp = (props) => {
 export const FirstApp = ({nombre, title}) => {
