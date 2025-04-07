@@ -10,6 +10,6 @@ ReactDOM.createRoot( document.getElementById("root"))
 .render(
     <React.StrictMode>
         {/* <FirstApp nombre="Inuyasha!" title="Seshomaru ataca de nuevo..."/> */}
-        <CounterApp value={10} />
+        <CounterApp value={20} />
     </React.StrictMode>    
 )
