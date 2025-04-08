@@ -1,7 +1,5 @@
 
 
-
-
-const retornaArreglo = () =>{
+export const retornaArreglo = () =>{
     return ['ABC', 123];
 }
