@@ -18,9 +18,9 @@ export const FirstApp = ({nombre, title}) => {
 
   return (
     <>
-      <h1>Anime App</h1>
+      <h1 data-testid="h1-anime">Anime App</h1>
       <h2>Title: {nombre}</h2>
-      <h3>Episode: {title}</h3>
+      <h3 data-testid="h3-title">Episode: {title}</h3>
     </>
   );
 };
