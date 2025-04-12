@@ -9,7 +9,8 @@ import { CounterApp } from "./CounterApp";
 ReactDOM.createRoot( document.getElementById("root"))
 .render(
     <React.StrictMode>
-        <FirstApp nombre="Inuyasha!" title="Seshomaru ataca de nuevo..."/>
         {/* <CounterApp value={20} /> */}
+        <FirstApp nombre="Inuyasha!" title="Seshomaru ataca de nuevo..."/>
+        {/* <FirstApp /> */}
     </React.StrictMode>    
 )
