@@ -14,13 +14,13 @@
 
 
 // export const FirstApp = (props) => {
-export const FirstApp = ({nombre, title}) => {
+export const FirstApp = ({title, episode}) => {
 
   return (
     <>
-      <h1 data-testid="h1-anime">Anime App</h1>
-      <h2>Title: {nombre}</h2>
-      <h3 data-testid="h3-title">Episode: {title}</h3>
+      <h1 data-testid="h1-anime-app">Anime App</h1>
+      <h2>{title}</h2>
+      <h3>{episode}</h3>
     </>
   );
 };
