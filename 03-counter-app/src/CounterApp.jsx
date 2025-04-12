@@ -4,18 +4,18 @@
 
 import { useState } from "react";
 
-export const CounterApp = ({value}) => {
+export const CounterApp = ({initValue}) => {
 
-    let [counter, setCounter] = useState(value);
+    let [counter, setCounter] = useState(initValue);
 
     
   return (
     <>
-      <h1>Counter App</h1>
+      <span>Counter App</span>
       <h2>{counter}</h2>
       <button onClick={() => setCounter(counter + 1)}>+1</button>
       <button onClick={() => setCounter(counter - 1)}>-1</button>
-      <button onClick={() => setCounter(value)}>Reset</button>
+      <button onClick={() => setCounter(initValue)}>Reset</button>
     </>
   );
 };

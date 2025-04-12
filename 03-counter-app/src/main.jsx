@@ -9,8 +9,8 @@ import { CounterApp } from "./CounterApp";
 ReactDOM.createRoot( document.getElementById("root"))
 .render(
     <React.StrictMode>
-        {/* <CounterApp value={20} /> */}
-        <FirstApp title="Inuyasha!" episode="Seshomaru ataca de nuevo..."/>
+        <CounterApp initValue={20} />
+        {/* <FirstApp title="Inuyasha!" episode="Seshomaru ataca de nuevo..."/> */}
         {/* <FirstApp /> */}
     </React.StrictMode>    
 )
