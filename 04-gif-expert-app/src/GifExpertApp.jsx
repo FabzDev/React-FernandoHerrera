@@ -3,19 +3,28 @@ import { AddCategory } from "./components/AddCategory";
 
 // bkUpWx7ebyORXlTH747bYSgrAmAw64BC
 export const GifExpertApp = () => {
-  const [categories, setCategories] = useState(['Attack On Titan', 'Ichigo 100%'])
-  const addAnime = (anime) => setCategories([anime, ...categories]);
+  
+  const [animes, setAnimes] = useState(['Attack On Titan', 'Ichigo 100%'])
+  
+  const onAddCategory = (anime) => {
+    setAnimes(animes => [anime, ...animes])
+    // setAnimes([anime, ...animes]);
+  }
 
 
   return (
     <>
       <h1>Gif Expert App</h1>
       
-      <AddCategory />
-      <button onClick={() => addAnime('Naruto')}>Add Category</button>
+      <AddCategory 
+      // setAnime={setAnimes}
+      onNewCategory={event => onAddCategory(event)}
+      />
+
+      {/* <button onClick={() => addAnime(animes[0])}>Add Category</button> */}
       
       <ul>
-        {categories.map(category => <li key={category}>{category}</li>)}
+        {animes.map(category => <li key={category}>{category}</li>)}
       </ul>    
     </>
   );

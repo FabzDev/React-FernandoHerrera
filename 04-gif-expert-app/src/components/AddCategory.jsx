@@ -1,17 +1,26 @@
 import { useState } from "react";
 
-export const AddCategory = () => {
-  const [inputValue, setInputValue] = useState("Attack on Titan");
-
+// export const AddCategory = ({setAnime}) => {
+export const AddCategory = ({onNewCategory}) => {
+  
+  const [inputValue, setInputValue] = useState("");
+  
   const handleTextImput = ({ target }) => {
     setInputValue(target.value);
-    // console.log(inputValue);
   };
 
   const onSubmit = (event) => {
     event.preventDefault();
-    // console.log(inputValue);
+    if (inputValue.trim() < 1) return;
     
+    onNewCategory(inputValue.trim())
+
+    // setAnime(animes => {
+    //   if (animes.find(anime => anime == inputValue.trim())) return animes;
+    //   return [inputValue, ...animes];
+    // });
+
+    setInputValue("");
   }
 
   return (
@@ -20,7 +29,7 @@ export const AddCategory = () => {
           type="text"
           placeholder="Buscar Gif"
           value={inputValue}
-          onChange={handleTextImput}
+          onChange={ handleTextImput }
         />
     </form>
   );
