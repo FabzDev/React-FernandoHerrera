@@ -1,33 +1,25 @@
 import { useState } from "react";
 import { AddCategory } from "./components/AddCategory";
+import { GifGrid } from "./components/GifGrid";
 
 // bkUpWx7ebyORXlTH747bYSgrAmAw64BC
 export const GifExpertApp = () => {
-  
-  const [animes, setAnimes] = useState(['Attack On Titan', 'Ichigo 100%'])
-  
-  const onAddCategory = (anime) => {
-    // if (animes.find(a => a == anime)) return;
-    if (animes.includes(anime)) return;
-    setAnimes(animes => [anime, ...animes])
-    // setAnimes([anime, ...animes]);
-  }
+  const [categories, setCategories] = useState(["Attack On Titan","Ichigo 100%"]);
 
+  const onAddCategory = (newCategory) => {
+    if (categories.includes(newCategory)) return;
+    setCategories((categories) => [newCategory, ...categories]);
+  };
 
   return (
     <>
       <h1>Gif Expert App</h1>
-      
-      <AddCategory 
-      // setAnime={setAnimes}
-      onNewCategory={event => onAddCategory(event)}
-      />
+      <AddCategory onNewCategory={(event) => onAddCategory(event)} />
 
-      {/* <button onClick={() => addAnime(animes[0])}>Add Category</button> */}
-      
-      <ul>
-        {animes.map(category => <li key={category}>{category}</li>)}
-      </ul>    
+      {categories.map((category) => (
+        <GifGrid key={category} category={category} />
+      ))}
+
     </>
   );
 };
