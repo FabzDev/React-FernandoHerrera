@@ -7,6 +7,8 @@ export const GifExpertApp = () => {
   const [animes, setAnimes] = useState(['Attack On Titan', 'Ichigo 100%'])
   
   const onAddCategory = (anime) => {
+    // if (animes.find(a => a == anime)) return;
+    if (animes.includes(anime)) return;
     setAnimes(animes => [anime, ...animes])
     // setAnimes([anime, ...animes]);
   }
