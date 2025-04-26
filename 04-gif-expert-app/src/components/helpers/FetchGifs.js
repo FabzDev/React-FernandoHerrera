@@ -5,7 +5,7 @@ export const fetchGifs = async (cat) => {
     `https://api.giphy.com/v1/gifs/search?api_key=ybboGP7QGwVdJvwi4E1x2Yc22tVgYqhS&q=${cat}&limit=5`
   );
   const { data } = await gifsHttpResp.json();
-  console.log(data);
+  // console.log(data);
   
   const gifs = data.map((gifData) => ({
     id: gifData.id,
