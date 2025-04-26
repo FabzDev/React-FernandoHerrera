@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-// export const AddCategory = ({setAnime}) => {
 export const AddCategory = ({onNewCategory}) => {
   
   const [inputValue, setInputValue] = useState("");
@@ -12,14 +11,7 @@ export const AddCategory = ({onNewCategory}) => {
   const onSubmit = (event) => {
     event.preventDefault();
     if (inputValue.trim() < 1) return;
-    
     onNewCategory(inputValue.trim())
-
-    // setAnime(animes => {
-    //   if (animes.find(anime => anime == inputValue.trim())) return animes;
-    //   return [inputValue, ...animes];
-    // });
-
     setInputValue("");
   }
 

@@ -1,4 +1,4 @@
-// https://api.giphy.com/v1/gifs/search?api_key=ybboGP7QGwVdJvwi4E1x2Yc22tVgYqhS&q=${search}&limit=5
+
 
 export const fetchGifs = async (cat) => {
   const gifsHttpResp = await fetch(

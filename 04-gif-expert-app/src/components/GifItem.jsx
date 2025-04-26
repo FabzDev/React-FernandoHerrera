@@ -8,5 +8,3 @@ export const GifItem = ({url, title}) => {
     </div>
   )
 }
-
-export default GifItem
