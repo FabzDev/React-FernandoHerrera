@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { AddCategory, GifGrid } from "./components";
 
-// bkUpWx7ebyORXlTH747bYSgrAmAw64BC
 export const GifExpertApp = () => {
   const [categories, setCategories] = useState(["Ichigo Bleach", "Naruto"]);
 
