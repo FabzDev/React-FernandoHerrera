@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import { users } from "../assets/usersDB";
 
@@ -6,11 +6,9 @@ export const FilterUsers = (props) => {
   console.log("Component Renderized...");
 
   const [nameList, setNameList] = useState([]);
-  const debounceTimer = useRef(null);
 
   const handleInputChange = (e) => {
-    clearTimeout(debounceTimer.current);
-    debounceTimer.current = setTimeout(() => {
+    setTimeout(() => {
       const newInputValue = e.target.value;
       const regex = newInputValue != "" && new RegExp(`^${newInputValue}`);
       const namesFound = users.filter((user) => user.name.match(regex));
